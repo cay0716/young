@@ -1,0 +1,80 @@
+
+body {
+    background: #dadada;
+  }
+
+.hidden {
+    display: none;
+}
+
+.visual_content {
+    margin: 0 auto;
+    background-image: url(img/copy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    width: 50vw;
+    height: 30vw;
+}
+.visual_content h2 {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    color: #efefef;
+    padding-top: 13vw;
+}
+.visual_content p {
+    color: #efefef;
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+}
+.copy button {
+    font-family: "Gowun Batang", serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #79ad95;
+    border: none;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+    background: #dadada;
+}
+.copy button:hover {
+    filter: blur(0);
+}
+.line {
+    color: #79ad95;
+}
+.copy h3 {
+    margin-bottom: 3vw;
+}
+.copy_p {
+    display: inline-block;
+    text-align: left;
+
+}
+.copy_input {
+    display: inline-block;
+    vertical-align: top; 
+}
+.copy input {
+    margin-left: 40px;
+    padding-left: 10px;
+    display: block;
+    width: 400px;
+    font-family: "Gowun Batang", serif;
+    font-size: 16px;
+    border: none;
+    background: #4a4a4a;
+    color: #efefef;
+}
+.copy input::placeholder{
+    padding-left: 10px;
+    color: #707070;
+}

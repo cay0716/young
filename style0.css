@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    background: #efefef;
+}
+.visual_content {
+    position: relative;
+    background: #efefef;
+}
+#img {
+    z-index: 2;
+}
+.img {
+    margin: 0 auto;
+    background-image: url('img/gif1.gif');
+    background-size: cover;
+    width: 50vw;
+    height: 30vw;
+}
+#text {
+    width: fit-content;
+}
+.text {
+    margin: 50px 0px 50px 80px;
+    font-size: 5vh;
+    overflow: hidden;
+    border-right: solid 5px #79ad95;
+    white-space: nowrap;
+    animation: type-text forwards 5s, cursor-blink .6s infinite;
+    animation-timing-function: steps(60);
+}
+@keyframes type-text {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes cursor-blink {
+    0% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #79ad95;
+    }
+}
+.main_content {
+    position: relative;
+    overflow: hidden;
+}
+.sec1, .sec2 {
+    width: 50%;
+    height: 900px;
+    margin-top: 170px;
+    position: relative;
+}
+.sec1 {
+    float: left;
+    position: relative;
+}
+.sec2 {
+    float: right;
+    background: linear-gradient(to right, #a4a4a4, #e3e3e3, #e3e3e3, #e3e3e3, #e3e3e3);
+    padding: 10vw 0 10vw 10vw;
+    box-sizing: border-box;
+}
+.sec1 p {
+    display: inline;
+}
+.sec1 img {
+    display: block;
+    overflow: hidden;
+    /* display: inline; */
+    width: 800px;
+    filter: grayscale(100%);
+    mask-image: linear-gradient(to left, #a4a4a4, #e3e3e3, #e3e3e3, #e3e3e3, #e3e3e3);
+    z-index: 0;
+}
+.gradient_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #aeaeae 0%, #aeaeae 0%, #282828 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.sec2 p {
+    width: 18vw;
+    display: inline;
+    float: left; 
+    margin-left: 20px;
+}
+
+.menu1_nav {
+    margin-bottom: 300px;
+}
+
+::selection {
+    background: transparent;
+}
+.card {
+    z-index: 3;
+    color: #01432e;
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    width: 280px;
+    height: 400px;
+    background: #e0e1dc;
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.card:before {
+    content:'';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #BAC1BA;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #92A29C;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card .imgBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
+}
+
+.card .bark {
+    position: absolute;
+    background: #e0e1dc;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s;
+}
+
+.card .imgBox img {
+    min-width: 250px;
+    max-height: 400px;
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+    opacity: 1;
+    transition: .6s;
+    box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+.card .details p {
+    font-size: 12px;
+    line-height: 23px;
+    padding: 0 0 0 65px;
+    text-align: center;
+}
+.card .details .menu1_btn {
+    position: absolute;
+    display: block;
+    top: 220px;
+    left: 90px;
+    color: #79ad95;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Nanum Brush Script", cursive;
+    transition: filter 0.6s ease;
+}
+.card .details .menu1_btn:hover {
+    filter: blur(2px);
+}

@@ -1,0 +1,268 @@
+body {
+  background: #dadada;
+}
+
+
+.flip_book{
+    justify-content: center;
+    text-align: center;
+    padding: 2em 0;
+    margin-left: 300px;
+}
+.book {
+    perspective: 250vw;
+    transition: opacity 0.4s 0.2s;
+  }
+  p{
+    /* margin-top: 8vw; */
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000000;
+  }
+  span {
+    font-size: 1vw;
+  }
+  .quotation {
+    font-size: 0.8vw;
+  }
+  .page ol {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1vw;
+    text-align: left;
+    counter-reset: list 0;
+  }
+  .page ol li {
+    padding-left: 1vw;
+    position: relative;
+    counter-increment: list;
+  }
+  .page ol li::before{
+    content: counter(list);
+
+    position: absolute;
+
+    left: -2em;
+    top: -0.2em;
+
+    color: #fff;
+    background: #79ad95;
+    border-radius: 50%;
+    font-size: .65rem;
+    width: 1.07rem;
+    height: 1.07rem;
+    line-height: 1.75;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0.25rem;
+    vertical-align: top;
+  }
+
+  .page h3 {
+    /* margin-top: 6vw; */
+    font-size: 1.5vw;
+  }
+  .page .poems {
+    margin-top: 2vw;
+    font-size: 1vw;
+  }
+  .page {
+    width: 30vw;
+    height: 44vw;
+    background-color: #111111;
+    float: left;
+    margin-bottom: 0.5em;
+    background: left top no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 3px 4px 5px 0px #bcbcbc; 
+
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    box-sizing: border-box;
+  }
+  .page:nth-child(even) {
+    clear: both;
+  }
+  .page:nth-child(1) {
+    background-image: url("img/book.jpg") !important;
+  }
+  .page:last-child {
+    background-image: url("img/back.jpg") !important;
+  }
+  .color_different {
+    background: #88ad9c !important;
+  }
+  .color_different p{
+    color: #efefef;
+    font-size: 1.2vw;
+  }
+  .book .pages {
+    width: 60vw;
+    height: 44vw;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+  }
+  .book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 30vw;
+    height: 44vw;
+    transform-origin: 0 0;
+    transition: transform 1.4s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
+    background-color: #d0ddd8;
+  }
+  .book .page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.7s;
+    z-index: 2;
+  }
+  .book .page:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(odd):hover {
+    transform: rotateY(-15deg);
+  }
+  .book .page:nth-child(odd):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .book .page:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    border-color: black;
+    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.grabbing {
+    transition: none;
+  }
+  .book .page.flipped:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+  }
+  .book .page.flipped:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.flipped:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+  }
+  .book .page.flipped:nth-child(even):hover {
+    transform: rotateY(15deg);
+  }
+  .book .page.flipped:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page.flipped:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .page:nth-child(odd){
+    background-position: right top;
+  }
+
+
+
+
+
+.poems_arrange{
+    margin-top: 10vw;
+}
+.bingo_board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vw;
+    width: 90vw;
+    height: 130vw;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.cell {
+    background: #597d6b;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 2px 2px 4px 1px gray;
+    padding: 8vw 2vw 8vw 2vw;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    /* 세로스크롤 */
+    overflow-y: auto;
+}
+.cell::-webkit-scrollbar {
+  width: 16px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #888; /* 스크롤 막대 색상 */
+}
+.cell h2 {
+    top: 60px;
+    color: #efefef;
+    font-size:2vw;
+}
+.cell p {
+    top: 10%;
+    font-size: 1vw;
+}
+.cell p, h2{
+  text-align: left;
+}
+.title, .content {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+}
+.title span {
+  display: block;
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.content span {
+  font-weight: bold;
+}
+.title {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.cell:hover {
+  background: #aac0b5;
+}
+.cell:hover .content {
+    opacity: 1;
+}
+.cell:hover .title {
+    opacity: 0;
+}
+  

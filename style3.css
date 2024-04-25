@@ -1,0 +1,149 @@
+
+
+#wrap {
+    background: #6e6e6e !important;
+} 
+main {
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    background: #6e6e6e;
+}
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+.container h1 {
+    color: #efefef;
+}
+
+.book_content {
+    background: #efefef;
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+    box-shadow: 0 0 10px 5px rgb(78, 78, 78);
+    box-sizing: border-box;
+    padding: 60px 80px;
+    margin-top: 100px;
+}
+.index {
+    margin-bottom: 30px;
+    color: rgb(150, 150, 150);
+    font-weight: bold;
+    text-align: left;
+}
+main img {
+    width: 200px;
+    margin-top: 100px;
+    filter: grayscale(100%);
+}
+main .text {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+main .text h2 {
+    margin-bottom: 10px;
+    color: #79ad95;
+    font-size: 20px;
+}
+main .people {
+    margin: 80px 0;
+}
+main .people h3 {
+    color: #79ad95;
+}
+main .poems {
+    margin: 80px 0;
+}
+main .poems h3 {
+    color: #79ad95;
+    margin-bottom: 30px;
+}
+
+main .poems th {
+    color: rgb(179, 179, 179);
+}
+main .poems td, th {
+    text-align: left;
+    vertical-align: top;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-right: 15px solid;
+    border-color: transparent;
+}
+main .poems td:last-child, th:last-child {
+    border-right: none;
+}
+main .poems td {
+    font-size: 13px;
+}
+main ol {
+    margin-top: 20px;
+}
+main li {
+    counter-increment: list;
+    position: relative;
+    display: inline-block;
+    line-height: 2;
+    margin-left: 20px;
+}
+main li::before {
+    content: counter(list);
+    position: absolute;
+    left: -2.5em;
+    top: 0.2em;
+    color: #fff;
+    background: #9c9c9c;
+    border-radius: 50%;
+    font-size: .75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.75;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0.25rem;
+    vertical-align: top;
+}
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+main .page {
+    margin-top: 30px;
+}
+
+button {
+    border: none;
+    width: 280px;
+    height: 400px;
+    transition: 0.4s ease;
+    background: #6e6e6e;
+}
+.hidden {
+    display: none;
+}
+
+button:nth-child(1) {
+    background-image: url("img/poem1_ver3.png");
+}
+button:nth-child(1):hover {
+    background-image: url("img/poem1_ver4.png");
+}
+button:nth-child(2) {
+    background-image: url("img/poem3_ver3.png");
+}
+button:nth-child(2):hover {
+    background-image: url("img/poem3_ver4.png");
+}
+button:nth-child(3) {
+    background-image: url("img/poem2_ver3.png");
+}
+button:nth-child(3):hover {
+    background-image: url("img/poem2_ver4.png");
+}
+
+/* button:hover {
+    transform: perspective(1000px) rotateY(25deg);
+} */

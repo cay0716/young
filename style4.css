@@ -1,0 +1,78 @@
+body {
+    background: #dadada;
+  }
+
+.changed-background {
+    background-image: url('img/sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    color: white;
+}
+
+.visual_content {
+    margin: 0 auto;
+    background-image: url(img/skyGif.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    width: 50vw;
+    height: 30vw;
+}
+.visual_content h2 span {
+    font-size: 1vw;
+    font-weight: lighter;
+}
+.visual_content h2 {
+    font-size: 2vw;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    color: #2d2d2d;
+    padding-top: 11vw;
+}
+
+main {
+    justify-content: center;
+    text-align: center;
+    margin-top: 6vw;
+}
+main .write_poem textarea {
+    font-family: "Gowun Batang", serif;
+    font-size: 1.2vw;
+    width: 40vw;
+    height: 50vw;
+    padding-left: 3vw;
+    padding-top: 3vw;
+    padding-bottom: 45vw;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+main .write_poem :focus {
+    outline: none;
+}
+main .write_poem textarea::placeholder {
+    vertical-align: top;
+}
+main .write_poem textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+main button {
+    font-family: "Gowun Batang", serif;
+    font-size: 1vw;
+    border: solid 1px rgb(182, 182, 182);
+    border-radius: 4px;
+    padding: 1vw 1.3vw;
+    margin-top: 2vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    box-sizing: border-box;
+    filter: blur(2px);
+    transition: filter 0.6s ease;
+}
+main button:hover  {
+    font-family: "Gowun Batang", serif;
+    filter: blur(0);
+}

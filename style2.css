@@ -1,0 +1,118 @@
+body {
+    background:  #6e6e6e ;
+  }
+main {
+    position: relative;
+    overflow: hidden;
+}
+/* .margin {
+    width: 100px;
+    height: 100px;
+    margin: 530px;
+} */
+main h1 {
+    font-size: 30px;
+    margin-bottom: 10rem;
+}
+main p {
+    line-height: 1.8rem;
+    margin-bottom: .8em;
+}
+main .text {
+    margin-bottom: 70px;
+}
+.visual_content {
+    margin: 0 auto;
+    background-image: url(img/img_backvisual.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    width: 50vw;
+    height: 30vw;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.visual_content h2 span {
+    font-size: 1vw;
+    font-weight: lighter;
+}
+.visual_content h2 {
+    font-size: 2vw;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    color: #2d2d2d;
+    padding-top: 11vw;
+}
+.sec1, .sec2, .sec3, .sec4 {
+    width: 50%;
+    height: 70rem;
+    position: relative;
+    overflow-y: hidden;
+}
+/* ::-webkit-scrollbar {
+    width: 0;
+} */
+.sec1, .sec3 {
+    float: left;
+    background: #f5f5f5;
+    padding: 10vw 7vw 10vw 10vw;
+    box-sizing: border-box;
+}
+.sec2, .sec4 {
+    float: right;
+    background: linear-gradient(to right, #ececec, #f5f5f5, #f5f5f5);
+    padding: 10vw 10vw 10vw 7vw;
+    box-sizing: border-box;
+}
+.sec3 {
+    background: linear-gradient(to left, #ececec, #f3f3f3, #f3f3f3);
+}
+.sec4 {
+    background: linear-gradient(to right, #f0f0f0, #f5f5f5, #f5f5f5);
+}
+.sec2 .answer {
+    color: gray;
+}
+.sec2 ol {
+    margin-bottom: 5.9rem;
+}
+.sec2 li {
+    color: gray;
+    margin-left: 1.5rem;
+}
+.sec3 h3 {
+    margin-top: 4rem;
+    color: rgb(78, 78, 78);
+}
+.sec3 table{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border: 1px solid #c8c8c8;
+    border-collapse: collapse;
+}
+.sec3 table th, td {
+    padding: 1rem;
+    border: 1px solid #c8c8c8;
+    border-collapse: collapse;
+}
+.sec3 table th {
+    color: rgb(78, 78, 78);
+}
+.margin {
+    width: 50%;
+    height: 6rem;
+    background: transparent;
+}
+.margin2 {
+    width: 50%;
+    height: 3rem;
+    background: transparent;
+}
+.page {
+    margin-top: 10px;
+    text-align: center;
+}
+hr {
+    margin-top: 4px;
+}
